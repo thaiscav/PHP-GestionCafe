@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script language="javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" src="js/bootstrap.js"></script>
+    <script language="javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <h3>Lab 1 PHP - Thais Cavalcanti</h3>
+    <hr>
+
+    <div id="div1">
+        <h4>Lister rapport hebdomadaire:</h4>
+        <input type="button" value="Lister" onClick="envoyer('3')">
+        <form id="3" action="controller/gestionCafe.php" method="POST">
+            <input type="hidden" name="action" value="tout">
+        </form>
+    </div>
+
+    <div id="div2">
+        <form id="divConsJour" action="controller/gestionCafe.php" method="POST">
+            <h4>Liste de tous les programmeurs qui ont consommé des tasses de café pour une journée donnée:</h4>
+            <select name="jourSem">
+                        <option value="" selected="selected">Choisir jour</option>
+                        <option value="Lundi">Lundi</option>
+                        <option value="Mardi">Mardi</optiona>
+                        <option value="Mercredi">Mercredi</option>
+                        <option value="Jeudi">Jeudi</option>
+                        <option value="vendredi">Vendredi</option>
+                    </select>
+            <input type="hidden" name="action" value="cons_jour">
+            <input type="button" value="Lister" onClick="envoyer('divConsJour')">
+        </form>
+    </div>
+
+    <div id="div3">
+        <h4>Le nom du programmeur qui a consommé le plus de tasses de café:</h4>
+        <input type="button" value="Lister" onClick="envoyer('divPlusGrandCons')">
+        <form id="divPlusGrandCons" action="controller/gestionCafe.php" method="POST">
+            <input type="hidden" name="action" value="plusGrandCons">
+        </form>
+    </div>
+
+    <div id="div4">
+        <h4>La moyenne de tasses de café consommés par jour de la semaine:</h4>
+        <input type="button" value="Lister" onClick="envoyer('divMoyJour')">
+        <form id="divMoyJour" action="controller/gestionCafe.php" method="POST">
+            <input type="hidden" name="action" value="moy_jour">
+        </form>
+    </div>
+
+    <div id="div5">
+        <form id="divTasseProg" action="controller/gestionCafe.php" method="POST">
+            <h4>Nombre de tasses consommées pour un programmeur donné:</h4>
+            <input type="text" name="nom">
+            <input type="hidden" name="action" value="tasse_prog">
+            <input type="button" value="Lister" onClick="envoyer('divTasseProg')">
+        </form>
+    </div>
+
+    <div id="div6">
+        <form id="divJourMoy" action="controller/gestionCafe.php" method="POST">
+            <h4>Le jour de la semaine qui a la moyenne de consommation la plus élevée:</h4>
+            <input type="hidden" name="action" value="jour_moy">
+            <input type="button" value="Lister" onClick="envoyer('divJourMoy')">
+        </form>
+    </div>
+
+    <!--div id="div7">
+        <form id="divTasseProg" action="controller/gestionCafe.php" method="POST">
+            <h4>Nombre de tasses consommées pour un programmeur donné:</h4>
+            <select id="optionsNom" name="nom">
+                <?php
+                    if ($file = @fopen(donnees/programmeurs.txt, 'r')) {
+                        
+                        while(($line = fgets($file)) !== false) {
+
+                                $tab=explode(";",$ligne);
+
+                                echo '<option>{$tab[0]}</option>';
+                            }
+                            fclose($file);
+                        }
+                        else{
+                            echo "Impossible d'ouvrir le fichier";
+		                    exit;
+                        }
+                ?>
+            </select>
+            <input type="hidden" name="action" value="tasse_prog">
+            <input type="button" value="Lister" onClick="envoyer('divTasseProg')">
+        </form>
+    </div-->
+</body>
+
+</html>

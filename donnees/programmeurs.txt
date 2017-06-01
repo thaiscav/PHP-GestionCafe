@@ -1,0 +1,11 @@
+Gilbert;Lundi;1
+Wally;Lundi;2
+Edgar;Mardi;8
+Wally;Mardi;2
+Eugene;Mardi;3
+Josephine;Mercredi;2
+Eugene;Jeudi;3
+Gilbert;Jeudi;1
+Clarence;Vendredi;9
+Edgar;Vendredi;3
+Josephine;Vendredi;4
