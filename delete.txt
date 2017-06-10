@@ -1,0 +1,27 @@
+Array ( 
+[0] => Array ( [jour] => Lundi [qnt] => 3 ) 3/2 = 1.5
+[1] => Array ( [jour] => Mardi [qnt] => 13 ) 13/3 = 4.33
+[2] => Array ( [jour] => Mercredi [qnt] => 2 ) 2/1 = 2
+[3] => Array ( [jour] => Jeudi [qnt] => 4 ) 4/2 = 2
+[4] => Array ( [jour] => Vendredi [qnt] => 16 ) ) 16/3 = 5.33
+
+Array ( 
+[4] => Array ( [nom] => Josephine [jour] => Mercredi [qnt] => 6 ) 
+[5] => Array ( [nom] => Clarence [jour] => Vendredi [qnt] => 9 ) 
+[3] => Array ( [nom] => Eugene [jour] => Mardi [qnt] => 6 ) 
+[2] => Array ( [nom] => Edgar [jour] => Mardi [qnt] => 11 ) 
+[1] => Array ( [nom] => Wally [jour] => Lundi [qnt] => 4 ) 
+[0] => Array ( [nom] => Gilbert [jour] => Lundi [qnt] => 2 ) )
+
+
+Gilbert;Lundi;1
+Wally;Lundi;2
+Edgar;Mardi;8
+Wally;Mardi;2
+Eugene;Mardi;3
+Josephine;Mercredi;2
+Eugene;Jeudi;3
+Gilbert;Jeudi;1
+Clarence;Vendredi;9
+Edgar;Vendredi;3
+Josephine;Vendredi;4
